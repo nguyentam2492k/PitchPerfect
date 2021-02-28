@@ -26,35 +26,6 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
 //        setupRecorder()
     }
     
-    //lay duong dan den file lay am thanh
-//    func getDocumentsDirector() -> URL {
-//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
-//        return paths[0]
-//    }
-//
-//    func setupRecorder() {
-//        let audioFileName = getDocumentsDirector().appendingPathComponent(fileName)
-//        let recordSetting = [ AVFormatIDKey : kAudioFormatAppleLossless,
-//                              AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
-//                              AVEncoderBitRateKey : 32000,
-//                              AVNumberOfChannelsKey : 2,
-//                              AVSampleRateKey : 44100.2
-//                            ] as [String : Any]
-//
-//        do {
-//            soundRecorder = try AVAudioRecorder(url: audioFileName, settings: recordSetting)
-//            soundRecorder.delegate = self
-//            soundRecorder.prepareToRecord()
-//        } catch {
-//            print("Setup Recorder ERROR")
-//        }
-//
-//    }
-    
-//    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
-//        stopRecordingButton.isEnabled = false
-//    }
-    
     override func viewWillAppear(_ animated: Bool) {
 //        print("viewWillAppearCalled")
         super.viewWillAppear(animated)
@@ -121,6 +92,36 @@ class RecordViewController: UIViewController, AVAudioRecorderDelegate {
             playViewController.recordedAudioURL = recordedAudioURL
         }
     }
+    
+    //lay duong dan den file lay am thanh
+//    func getDocumentsDirector() -> URL {
+//        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+//        return paths[0]
+//    }
+//
+//    func setupRecorder() {
+//        let audioFileName = getDocumentsDirector().appendingPathComponent(fileName)
+//        let recordSetting = [ AVFormatIDKey : kAudioFormatAppleLossless,
+//                              AVEncoderAudioQualityKey : AVAudioQuality.max.rawValue,
+//                              AVEncoderBitRateKey : 32000,
+//                              AVNumberOfChannelsKey : 2,
+//                              AVSampleRateKey : 44100.2
+//                            ] as [String : Any]
+//
+//        do {
+//            soundRecorder = try AVAudioRecorder(url: audioFileName, settings: recordSetting)
+//            soundRecorder.delegate = self
+//            soundRecorder.prepareToRecord()
+//        } catch {
+//            print("Setup Recorder ERROR")
+//        }
+//
+//    }
+    
+//    func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
+//        stopRecordingButton.isEnabled = false
+//    }
+    
     
 }
 
